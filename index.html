@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/65455d7e7c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <title>proyecto_personal</title>
+  </head>
+  <body>
+    <div class="section_container header_container">
+      <header class="header">
+        <div class="logo_container">
+          <a href="index.html"><img src="imagenes/ajax.png" alt=""></a>
+        </div>
+        <nav class="nav-bar">
+          <i id ="toggle_menu" class="fa-solid fa-bars fa-2x"></i>
+          <ul class="icons_container">
+            <li class="loggin"><a href="register.html"><i class="fa-regular fa-user"></i></a></li>
+            <button class="carrito_btn" id="open_cart"><li><i class="fa-solid fa-cart-shopping"></i></li></button>
+          </ul>
+          <!-- CONTENEDOR RESONSIVE -->
+          <ul class="menu_responsive hidden">
+            <li class="loggin"><a href="register.html"><i class="fa-regular fa-user"></i></a></li>
+            <button class="carrito_btn" id="open_cart"><li><i class="fa-solid fa-cart-shopping"></i></li></button>
+          </ul>
+          <!-- HATSA ACA  -->
+        </nav>
+
+      </header>
+
+    </div>
+<!-- finaliza el nav -->
+<!-- comienza el carrusel -->
+
+    <div class="section_container">
+      <div class="section">
+        <section class="hero_container">
+            <div>
+          <p>
+            SOMOS ESTILO
+          </p>
+          <p>SOMOS AJAX</p>
+          </div>
+          </section>
+        </div>
+      </div>
+<!-- finaliza el carrusel-->
+<!-- comienza el market -->
+    <section class="section_container_mrkt">
+
+      <div class="market_section">
+        <div class="categories" id="categories">
+          <button class="category_btn active category_all_res" >Todo</button>
+          <button class="category_btn" data-category="Novedades">Novedades</button>
+          <button class="category_btn" data-category="Nike">Nike</button>
+          <button class="category_btn" data-category="Converse">Converse</button>
+          <button class="category_btn" data-category="Adidas">Adidas</button>
+          <button class="category_btn" data-category="Puma">Puma</button>
+          <button class="category_btn" data-category="Vans">Vans</button>
+          
+        </div>
+        <div class="market" id="market">
+
+        </div>
+      </div>
+        <div class="container_button_more">
+          <button class="button_see_more" id="button_see_more">VER MAS PRODUCTOS</button>
+        </div>
+    </section>
+<!-- finaliza el market -->
+<!-- comienza el footer -->
+<footer class="footer">
+  <div class="contact">
+    <h2 class="basic_tittle">Contacto</h2>
+  
+    <p class="basic_p">elmaildelosbepis@gmail.com</p>
+    <p class="basic_p">(011) 6855-7896</p>
+    <p class="basic_p"> 11 7854-6587</p>
+    <p class="basic_p">Lunes a Viernes 8 a 17hs</p>
+  
+  
+  </div>
+
+<div class="container_data">
+  
+  <h2 class="basic_tittle">Nuestras redes</h2>
+  <div class="social_media">
+  <div class="icon">
+    <i class="fa-brands fa-square-facebook"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-whatsapp"></i>
+  </div>
+  <div class="text_media">
+    <p class="basic_p">Facebook</p>
+    <p class="basic_p">Instagram</p>
+    <p class="basic_p">What's </p>
+  </div>
+</div>
+</div>
+<div class="information">
+  <h2 class="basic_tittle">Informacion</h2>
+  <div class="info">
+    <p class="basic_p">Envios a todo el pais</p>
+    <p class="basic_p">Nose que pone</p>
+    <p class="basic_p"> no se que poner</p>
+    <p></p>
+  </div>
+</div>
+<div class="help">
+    <h2 class="basic_tittle">Ayuda</h2>
+    <p class="basic_p">Preguntas Frecuentes</p>
+    <p class="basic_p">Estado de mi pedido</p>
+    <p class="basic_p">Terminos y condiciones</p>
+    <p class="basic_p">Contacto</p>
+    <p class="basic_p">Cambios y devoluciones</p>
+    <p class="basic_p">Defensa al consumidor</p>
+</div>
+
+</footer>  
+
+<!-- COMIENZA EL CARRITO -->
+<section class="cart_section hidden" id="cart_section">
+  
+  <div class="cart_container">
+    <div class="close_container_btn">
+        <button id="close_cart_btn">X</button>
+    </div>
+    <div class="cart">
+    <h2>Mi Carrito</h2>
+      <div class="cart_render" id="cart_render">
+
+      </div>
+    <div class="total_container">
+      <p class="Total"></p>
+    </div>
+
+    </div>
+    <div class="btns_cart">
+      <button id="cart_buy"  class="cart_btns">Comprar</button>
+      <button id="empty_cart" class="cart_btns ">Vaciar Carrito</button>
+    </div>
+  </div> 
+</section>
+
+<!-- NOTIFICACION -->
+<div class="add_modal">
+  
+</div>
+<script src="data.js"></script>
+<script src="index.js" ></script>
+  </body>
+  
+
+  
+</html>
