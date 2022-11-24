@@ -4,54 +4,74 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ICONS -->
     <script src="https://kit.fontawesome.com/65455d7e7c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <!-- CSS STYLE -->
     <link rel="stylesheet" href="style.css" />
+    <!-- LETTER -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <!-- BOOTSTRAP CSS-->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"> 
+    <!-- BOOTSTRAP JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>proyecto_personal</title>
   </head>
   <body>
+    <div class="shipment">
+      <p>¡Comprando dos pares de zapatillas Envio Gratuito en Capital Federal!</p>
+    </div>
     <div class="section_container header_container">
       <header class="header">
         <div class="logo_container">
           <a href="index.html"><img src="imagenes/ajax.png" alt=""></a>
         </div>
+        <i id ="toggle_menu" class="fa-solid fa-bars fa-2x"></i>
         <nav class="nav-bar">
-          <i id ="toggle_menu" class="fa-solid fa-bars fa-2x"></i>
           <ul class="icons_container">
             <li class="loggin"><a href="register.html"><i class="fa-regular fa-user"></i></a></li>
-            <button class="carrito_btn" id="open_cart"><li><i class="fa-solid fa-cart-shopping"></i></li></button>
+            <li class="carrito_btn" id="open_cart"><i class="fa-solid fa-cart-shopping"></i></li>
           </ul>
-          <!-- CONTENEDOR RESONSIVE -->
-          <ul class="menu_responsive hidden">
-            <li class="loggin"><a href="register.html"><i class="fa-regular fa-user"></i></a></li>
-            <button class="carrito_btn" id="open_cart"><li><i class="fa-solid fa-cart-shopping"></i></li></button>
-          </ul>
-          <!-- HATSA ACA  -->
         </nav>
-
       </header>
-
     </div>
+              <!-- CONTENEDOR RESONSIVE -->
+              <ul class="menu_responsive hidden">
+                <li class="loggin"><a href="register.html"><i class="fa-regular fa-user"></i></a></li>
+                <button class="carrito_btn" id="open_cart"><li><i class="fa-solid fa-cart-shopping"></i></li></button>
+              </ul>
+              <!-- HATSA ACA  -->
 <!-- finaliza el nav -->
-<!-- comienza el carrusel -->
 
-    <div class="section_container">
-      <div class="section">
-        <section class="hero_container">
-            <div>
-          <p>
-            SOMOS ESTILO
-          </p>
-          <p>SOMOS AJAX</p>
-          </div>
-          </section>
-        </div>
-      </div>
-<!-- finaliza el carrusel-->
+
+<!-- comienza el carrusel -->
+<section class="carousel_container">
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/imagenes/zapatilla_2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="/imagenes/carousel_2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="/imagenes/carousel_3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</section>
+
+<!-- finalza el carrusel -->
 <!-- comienza el market -->
     <section class="section_container_mrkt">
 
@@ -80,10 +100,10 @@
   <div class="contact">
     <h2 class="basic_tittle">Contacto</h2>
   
-    <p class="basic_p">elmaildelosbepis@gmail.com</p>
-    <p class="basic_p">(011) 6855-7896</p>
+    <p class="basic_p">Ajax.zapatillas@gmail.com</p>
+    <p class="basic_p">1134237937</p>
     <p class="basic_p"> 11 7854-6587</p>
-    <p class="basic_p">Lunes a Viernes 8 a 17hs</p>
+    <p class="basic_p">Lunes a Viernes 13 a 21hs</p>
   
   
   </div>
@@ -91,25 +111,20 @@
 <div class="container_data">
   
   <h2 class="basic_tittle">Nuestras redes</h2>
-  <div class="social_media">
-  <div class="icon">
-    <i class="fa-brands fa-square-facebook"></i>
-    <i class="fa-brands fa-instagram"></i>
-    <i class="fa-brands fa-whatsapp"></i>
-  </div>
-  <div class="text_media">
-    <p class="basic_p">Facebook</p>
-    <p class="basic_p">Instagram</p>
-    <p class="basic_p">What's </p>
-  </div>
-</div>
+
+    <ul class="media">
+    <li><a href="https://www.facebook.com/profile.php?id=100086236533022&mibextid=LQQJ4d"><i class="fa-brands fa-square-facebook"></i><p class="basic_p">Facebook</p></a></li>   
+    <li><a href="https://instagram.com/ajax.zapatillas?igshid=YmMyMTA2M2Y="><i class="fa-brands fa-instagram"></i><p class="basic_p">Instagram</p></a></li>
+    <li><a href=""><i class="fa-brands fa-whatsapp"></i><p class="basic_p">What's app </p></a></li>
+    </ul>
+
 </div>
 <div class="information">
   <h2 class="basic_tittle">Informacion</h2>
   <div class="info">
     <p class="basic_p">Envios a todo el pais</p>
-    <p class="basic_p">Nose que pone</p>
-    <p class="basic_p"> no se que poner</p>
+    <p class="basic_p">Medios de pago</p>
+    <p class="basic_p">Politicas de Envio</p>
     <p></p>
   </div>
 </div>
@@ -155,6 +170,8 @@
 </div>
 <script src="data.js"></script>
 <script src="index.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
   </body>
   
 

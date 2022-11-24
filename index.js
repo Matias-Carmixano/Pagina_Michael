@@ -84,9 +84,9 @@ const renderfilteredProducts = (category) =>{
 
 const renderfilterednovel = (category) =>{
     const productsList = productsData.filter(
-        (product) => product.novelty !== category
+        (product) => product.novelty === category
     );
-    product_container.innerHTML = productsList.map(renderProduct).join('');
+     product_container.innerHTML = productsList.map(renderProduct).join('');
 };
 
 const renderProducts = (index = 0, category = undefined) =>{
@@ -95,7 +95,7 @@ const renderProducts = (index = 0, category = undefined) =>{
         return;
     }
     renderfilteredProducts(category);
-    productsController.nextProductsIndex = 1;    
+     productsController.nextProductsIndex = 1;    
 };
 
 
@@ -103,9 +103,7 @@ const changeFilterState = (e) =>{
     const selectedCategory = e.target.dataset.category;
     
     changeButtonActiveState(selectedCategory);
-    changeShowMoreButton(selectedCategory);
-    
-    
+    changeShowMoreButton(selectedCategory);  
 };
 
 
@@ -141,7 +139,7 @@ const applyFilter = (e) =>{
         renderProducts();        
     }if(e.target.dataset.category == productsData[0].novelty){
             product_container.innerHTML = '';
-           renderfilterednovel()
+           renderfilterednovel(e.target.dataset.category)
     }
     else{
         product_container.innerHTML = '';
@@ -151,13 +149,12 @@ const applyFilter = (e) =>{
 
 
 const restartIndex = () =>{
-    if (!category) {
-        
-    }
+
 }
 
 const isLastIndexOF = () =>{
-    productsController.nextProductsIndex === productsController.productsLimit;
+    return productsController.nextProductsIndex === productsController.productsLimit;
+
 };
 
 const showMoreProducts = () =>{
@@ -174,7 +171,9 @@ const renderCartProduct = (cartProduct) => {
     const { id, name , img, price, quantity} = cartProduct ;
     return`
         <div class="cart_element" >
+
             <img src=${img} alt=${name}>
+
             <div class="description_container">
             <div class="element_description">
             <h3>${name}</h3>
@@ -364,9 +363,7 @@ const handleQuantity = (e) => {
 
 
 
-//responsive cart
-
-//opencart
+//responsive menu 
 const openToggle = (e) =>{
 
     if (e.target.id) {
@@ -376,6 +373,20 @@ const openToggle = (e) =>{
 
 }
 
+const CloseOnScroll = (e) =>{
+    if (e) {
+        menu_respon.classList.add("hidden");
+        cart_section.classList.add("hidden")
+    }
+}
+
+const hideMenu = (e) =>{
+    if (e) {
+        if (!menu_respon.classList.contains("hidden")) {
+            menu_respon.classList.add("hidden")
+        }
+    }
+}
 
 
 const init = () =>{
@@ -390,6 +401,8 @@ const init = () =>{
     cart_section.addEventListener('click', handleQuantity);
     toggleMenu.addEventListener('click', openToggle);
     menu_respon.addEventListener('click', opencart);
+    window.addEventListener("scroll",CloseOnScroll);
+    window.addEventListener("resize", hideMenu)
     };
 
 init(); 
